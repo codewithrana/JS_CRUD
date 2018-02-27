@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/config.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/itemcrud.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Item Details</legend>
+        <table>
+            <tr>
+                <td><label for="">ItemId</label></td>
+                <td><input type="text" id="id"></td>
+            </tr>
+            <tr>
+                <td><label for="">Name</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Price</label></td>
+                <td><input min="1" max="100" type="range" id="price"></td>
+            </tr>
+            <tr>
+                <td><label for="">Desc</label></td>
+                <td><textarea id="desc" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Date</label></td>
+                <td><input type="date" id="itemdate"></td>
+            </tr>
+            <tr>
+                <td><label for="">Url</label></td>
+                <td><input type="url" id="url"></td>
+            </tr>
+
+            <tr>
+                <td><label for="">Color</label></td>
+                <td><input type="color" id="color"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <td><button id="add">Add</button></td>
+                        <td><button>Delete</button></td>
+                        <td><button>Search</button></td>
+                        <td><button id="update">Update</button></td>
+                        <td><button>Sort</button></td>
+                        <td><button id="save">Save</button></td>
+                        <td><button id="load">Load</button></td>
+                        <td><button id="loadfromserver">Load From Server</button></td>
+                        <td><button>Clear All</button></td>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3>Total Record are <span id="total"></span> &nbsp; Mark <span id="mark"></span> &nbsp; UnMark <span id="unmark"></span> </h3>
+    </fieldset>
+    <fieldset>
+        <legend>Item List</legend>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Desc</td>
+                    <td>Date</td>
+                    <td>Url</td>
+                    <td>Color</td>
+                    <td>Operations</td>
+                </tr>
+            </thead>
+            <tbody id="itemtable">
+
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+
+</html>

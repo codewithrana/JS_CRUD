@@ -1,0 +1,3 @@
+{
+    "items": [{ "id": "100", "name": "abcd", "price": "51", "desc": "fhdsjkf", "itemdate": "2018-02-15", "url": "abcd.com", "color": "#000000", "markForDelete": false }, { "id": "101", "name": "xyz", "price": "51", "desc": "fhdsjkf", "itemdate": "2018-02-15", "url": "abcd.com", "color": "#000000", "markForDelete": false }]
+}

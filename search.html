@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function doAjax() {
+            var searchTxt = document.querySelector("#search").value;
+            var url = "http://api.giphy.com/v1/gifs/search?q=" + searchTxt + "&api_key=44ad31a2d0324ab9b17fc6d6026f658b&limit=10";
+            fetch(url,{method:'',data:''}).then(data => {
+                data.json().then(result => {
+                    console.log("Result is ", result);
+                    var root = document.querySelector("#root");
+                    root.innerHTML = "";
+                    for (let a of result.data) {
+                        var img = document.createElement("img");
+                        img.src = a.images.original.url;
+                        root.appendChild(img);
+                    }
+                    console.log("URL OF IMAGE IS ", result.data[0].images.original.url);
+                });
+
+                console.log("data is ", data);
+            }).catch(err => console.log("error is ", err));
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Type To Search" id="search">
+    <button onclick="doAjax()">Search</button>
+    <div id="root"></div>
+</body>
+
+</html>
